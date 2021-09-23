@@ -1,0 +1,22 @@
+{
+    "theme": {
+      "slug": "parkdalehaunt",
+      "name": "Parkdale Haunt Theme",
+      "author": "Cameron Nursall",
+      "PHPNamespace": "PDHaunt\\PDHaunt"
+    },
+    "dev": {
+      "browserSync": {
+        "live": true,
+        "proxyURL": "https://www.parkdalehaunt.com",
+        "bypassPort": "8181",
+        "https": true
+      },
+      "styles": {
+        "stage": 3,
+        "autoprefixer": {
+          "grid": true
+        }
+      }
+    }
+  }

@@ -1,0 +1,26 @@
+/**
+ * Custom styles for the front-page.php template.
+ */
+
+.site-header {
+	height: 6rem;
+}
+
+.site-branding {
+	display: none;
+}
+
+.main-navigation {
+	margin: auto;
+	z-index: 999;
+}
+
+.site-main {
+	top: -6rem;
+	position: relative;
+}
+
+.entry-content {
+	padding: 0;
+	margin: 0;
+}
