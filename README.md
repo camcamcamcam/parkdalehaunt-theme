@@ -159,3 +159,5 @@ For more information about the advanced features in WP Rig and how to use them, 
 
 ## License
 WP Rig is released under [GNU General Public License v3.0 (or later)](https://github.com/wprig/wprig/blob/master/LICENSE).
+#   p a r k d a l e h a u n t - t h e m e  
+ 
