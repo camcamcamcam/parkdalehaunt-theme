@@ -1,0 +1,60 @@
+.no-p {
+	padding: 0;
+}
+
+.no-p-y {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.no-p-x {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-p-top {
+	padding-top: 0;
+}
+
+.no-p-bottom {
+	padding-bottom: 0;
+}
+
+.no-p-left {
+	padding-left: 0;
+}
+
+.no-p-right {
+	padding-right: 0;
+}
+
+.no-m {
+	margin: 0;
+}
+
+.no-m-y {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.no-m-x {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.no-m-top {
+	margin-top: 0;
+}
+
+.no-m-bottom {
+	margin-bottom: 0;
+}
+
+.no-m-left {
+	margin-left: 0;
+}
+
+.no-m-right {
+	margin-right: 0;
+}
+

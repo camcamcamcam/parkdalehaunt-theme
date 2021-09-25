@@ -117,3 +117,7 @@ ins {
 big {
 	font-size: 125%;
 }
+
+p.bottom-border {
+	border-bottom: var(--color-theme-primary) 2px solid;
+}
