@@ -8,6 +8,7 @@
 namespace WP_Rig\WP_Rig\Editor;
 
 use WP_Rig\WP_Rig\Component_Interface;
+use function WP_Rig\WP_Rig\wp_rig;
 use function add_action;
 use function add_theme_support;
 
@@ -32,6 +33,7 @@ class Component implements Component_Interface {
 	 */
 	public function initialize() {
 		add_action( 'after_setup_theme', array( $this, 'action_add_editor_support' ) );
+		add_action( 'after_setup_theme', array( $this, 'add_custom_gutenbeg_blocks' ) );
 	}
 
 	/**
@@ -64,12 +66,12 @@ class Component implements Component_Interface {
 				array(
 					'name'  => __( 'Primary', 'wp-rig' ),
 					'slug'  => 'theme-primary',
-					'color' => '#e36d60',
+					'color' => '#c1272d',
 				),
 				array(
 					'name'  => __( 'Secondary', 'wp-rig' ),
 					'slug'  => 'theme-secondary',
-					'color' => '#41848f',
+					'color' => '#f2f2f2',
 				),
 				array(
 					'name'  => __( 'Red', 'wp-rig' ),
@@ -94,7 +96,7 @@ class Component implements Component_Interface {
 				array(
 					'name'  => __( 'Black', 'wp-rig' ),
 					'slug'  => 'theme-black',
-					'color' => '#1C2833',
+					'color' => '#1f1f1f',
 				),
 				array(
 					'name'  => __( 'Grey', 'wp-rig' ),
@@ -121,9 +123,6 @@ class Component implements Component_Interface {
 
 		/*
 		 * Add support custom font sizes.
-		 *
-		 * Add the line below to disable the custom color picker in the editor.
-		 * add_theme_support( 'disable-custom-font-sizes' );
 		 */
 		add_theme_support(
 			'editor-font-sizes',
@@ -152,6 +151,34 @@ class Component implements Component_Interface {
 					'size'      => 39,
 					'slug'      => 'larger',
 				),
+			)
+		);
+
+		/*
+		 * Add a custom style to the image block
+		 */
+		register_block_style(
+			'core/image',
+			array(
+				'name'      => 'image-bordered',
+				'label'     => __( 'Bordered', 'wp-rig' ),
+			)
+		);
+	}
+
+	/**
+	 * Adds the action and filter hooks to integrate with WordPress.
+	 */
+	public function add_custom_gutenbeg_blocks() {
+		$js_uri = get_theme_file_uri( '/assets/js/' );
+		$js_dir = get_theme_file_path( '/assets/js/' );
+
+		wp_register_script( 'custom-gutenberg-blocks', $js_uri . 'blocks.min.js', array(), wp_rig()->get_asset_version( $js_dir . 'blocks.min.js' ), false );
+
+		register_block_type(
+			'pdhaunt/call-to-action',
+			array(
+				'editor_script' => 'custom-gutenberg-blocks',
 			)
 		);
 	}

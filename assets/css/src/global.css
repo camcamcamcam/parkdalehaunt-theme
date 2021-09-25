@@ -198,8 +198,12 @@ select {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
 .site-header {
+	background: url(../images/header-bg.jpg) repeat-x;
+	background-size: auto 100%;
+}
+
+.header-content {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -209,6 +213,7 @@ select {
 	max-width: var(--content-width);
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 
 .header-image {
@@ -231,6 +236,7 @@ select {
 	flex-basis: auto;
 	align-self: auto;
 	text-align: center;
+	line-height: 0;
 }
 
 .site-title {
@@ -288,6 +294,7 @@ select {
 	.nav--toggle-small.nav--toggled-on .menu {
 		display: block;
 	}
+
 }
 
 @media (--wide-menu-query) {
@@ -480,6 +487,21 @@ select {
 		flex-wrap: wrap;
 		justify-content: right;
 	}
+}
+
+@media (--narrow-menu-query) {
+
+	.main-navigation a {
+		color: var(--color-theme-secondary);
+		padding: 0;
+	}
+
+	.main-navigation ul li {
+		text-align: center;
+		padding: 0.5em 0;
+		margin-bottom: 2px;
+	}
+
 }
 
 /*--------------------------------------------------------------

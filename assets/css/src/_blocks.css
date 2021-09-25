@@ -189,3 +189,31 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 	border-radius: var(--border-radius);
 	font-weight: 700;
 }
+
+/*--------------------------------------------------------------
+# Seperator Block - overrides core styles
+--------------------------------------------------------------*/
+.wp-block-separator {
+	border-color: var(--color-theme-primary);
+	opacity: 1;
+}
+
+.wp-block-separator.is-style-wide {
+	padding: 0;
+	max-width: calc(var(--content-width) - 3rem);
+}
+
+.wp-block-separator.is-style-dots::before {
+	color: var(--color-theme-primary);
+}
+
+/*--------------------------------------------------------------
+# Image Block - overrides core styles/custom style
+--------------------------------------------------------------*/
+.wp-block-image {
+	margin: 0;
+}
+
+.wp-block-image.is-style-image-bordered {
+	border: var(--color-theme-primary) 10px solid;
+}

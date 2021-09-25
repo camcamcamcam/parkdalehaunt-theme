@@ -29,10 +29,10 @@ body {
 
 /* stylelint-disable */
 hr {
-	background-color: var(--border-color-light);
+	background-color: var(--color-theme-primary);
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 4.5em auto;
 }
 /* stylelint-enable */
 

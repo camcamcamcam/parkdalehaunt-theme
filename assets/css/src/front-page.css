@@ -3,11 +3,45 @@
  */
 
 .site-header {
-	height: 6rem;
+	height: 100px;
+	display: flex;
+	align-items: center;
 }
 
 .site-branding {
 	display: none;
+}
+
+@media (--narrow-menu-query) {
+
+	.nav--toggle-small .menu-toggle {
+		display: none;
+	}
+
+	.nav--toggle-small .menu {
+		display: block;
+	}
+
+	.main-navigation .menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: right;
+	}
+
+	.main-navigation a {
+		padding: 0.5em 2.5em;
+	}
+
+	.main-navigation ul li {
+		padding: 0;
+		margin-bottom: 2px;
+		margin-left: 0.5em;
+	}
+
+	.main-navigation ul li:first-child {
+		margin-left: 0;
+	}
+
 }
 
 .main-navigation {
@@ -16,11 +50,23 @@
 }
 
 .site-main {
-	top: -6rem;
+	top: -100px;
 	position: relative;
 }
 
 .entry-content {
 	padding: 0;
 	margin: 0;
+}
+
+.podcast-links {
+	margin-bottom: 0.5em;
+}
+
+@media (max-width: 781px) {
+
+	.podcast-links .wp-block-column:not(:only-child) {
+		margin-bottom: 1em;
+	}
+
 }

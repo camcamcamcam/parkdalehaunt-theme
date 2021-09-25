@@ -16,6 +16,7 @@ wp_rig()->print_styles( 'wp-rig-content' );
 ?>
 	<main id="primary" class="site-main">
 		<?php
+		get_template_part( 'template-parts/content/page_header' );
 
 		while ( have_posts() ) {
 			the_post();

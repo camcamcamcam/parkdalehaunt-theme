@@ -49,8 +49,15 @@ if ( is_404() ) {
 	?>
 	<header class="page-header">
 		<?php
-		the_archive_title( '<h1 class="page-title">', '</h1>' );
-		the_archive_description( '<div class="archive-description">', '</div>' );
+		post_type_archive_title( '<h1 class="page-title">', '</h1>' );
+		?>
+	</header><!-- .page-header -->
+	<?php
+} elseif ( is_page() || is_singular( get_post_type() ) ) {
+	?>
+	<header class="page-header">
+		<?php
+		the_title( '<h1 class="entry-title entry-title-singular">', '</h1>' );
 		?>
 	</header><!-- .page-header -->
 	<?php

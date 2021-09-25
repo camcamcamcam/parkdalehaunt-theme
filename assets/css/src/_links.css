@@ -6,17 +6,15 @@
 /* stylelint-disable */
 a {
 	color: var(--color-link);
+	text-decoration: none;
 }
 /* stylelint-enable */
-
-a:visited {
-	color: var(--color-link-visited);
-}
 
 a:hover,
 a:focus,
 a:active {
 	color: var(--color-link-active);
+	text-decoration: underline;
 }
 
 a:focus {
