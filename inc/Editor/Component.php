@@ -33,7 +33,6 @@ class Component implements Component_Interface {
 	 */
 	public function initialize() {
 		add_action( 'after_setup_theme', array( $this, 'action_add_editor_support' ) );
-		add_action( 'after_setup_theme', array( $this, 'add_custom_gutenbeg_blocks' ) );
 	}
 
 	/**
@@ -162,23 +161,6 @@ class Component implements Component_Interface {
 			array(
 				'name'      => 'image-bordered',
 				'label'     => __( 'Bordered', 'wp-rig' ),
-			)
-		);
-	}
-
-	/**
-	 * Adds the action and filter hooks to integrate with WordPress.
-	 */
-	public function add_custom_gutenbeg_blocks() {
-		$js_uri = get_theme_file_uri( '/assets/js/' );
-		$js_dir = get_theme_file_path( '/assets/js/' );
-
-		wp_register_script( 'custom-gutenberg-blocks', $js_uri . 'blocks.min.js', array(), wp_rig()->get_asset_version( $js_dir . 'blocks.min.js' ), false );
-
-		register_block_type(
-			'pdhaunt/call-to-action',
-			array(
-				'editor_script' => 'custom-gutenberg-blocks',
 			)
 		);
 	}
