@@ -3,6 +3,7 @@
       "slug": "parkdalehaunt",
       "name": "Parkdale Haunt Theme",
       "author": "Cameron Nursall",
+      "description": "",
       "PHPNamespace": "PDHaunt\\PDHaunt"
     },
     "dev": {
@@ -18,5 +19,17 @@
           "grid": true
         }
       }
+    },
+    "export": {
+      "compress": false,
+      "generatePotFile": true,
+      "filesToCopy": [
+        "LICENSE",
+        "readme.txt",
+        "screenshot.png",
+        "assets/css/vendor/**/*.css",
+        "assets/js/vendor/**/*.js",
+        "config/themeCustomizeSettings.json"
+      ]
     }
   }

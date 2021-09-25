@@ -6,11 +6,6 @@
       "id": "global",
       "title": "Parkdale Haunt Settings",
       "priority": 30
-    },
-    {
-      "id": "social",
-      "title": "Social",
-      "priority": 31
     }
   ],
   "settings": [
@@ -18,41 +13,6 @@
       "id": "ga_id",
       "label": "Google Analytics ID",
       "section": "global",
-      "refresh": false
-    },
-    {
-      "id": "twitter",
-      "label": "Twitter URL",
-      "type": "url",
-      "section": "social",
-      "refresh": false
-    },
-    {
-      "id": "instagram",
-      "label": "Instagram URL",
-      "type": "url",
-      "section": "social",
-      "refresh": false
-    },
-    {
-      "id": "patreon",
-      "label": "Patreon URL",
-      "type": "url",
-      "section": "social",
-      "refresh": false
-    },
-    {
-      "id": "ko-fi",
-      "label": "Ko-Fi URL",
-      "type": "url",
-      "section": "social",
-      "refresh": false
-    },
-    {
-      "id": "merch",
-      "label": "Merch Store URL",
-      "type": "url",
-      "section": "social",
       "refresh": false
     }
   ]
