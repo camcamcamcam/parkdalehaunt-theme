@@ -17,6 +17,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	padding-bottom: 1em;
+	margin-bottom: 0;
 }
 
 .back_to_epsiodes {
@@ -27,16 +28,17 @@
 	max-width: var(--content-width);
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 1.5rem;
+	padding: 1em 1.5em 0;
 }
 
 .episode-inner {
 	display: grid;
 	grid-auto-rows: 1fr;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: minmax(200px, 1fr) 3fr;
 	grid-template-rows: 1fr;
 	gap: 1em 1em;
 	grid-template-areas: ". .";
+	padding-bottom: 2em;
 }
 
 body:not(.single) .episode-inner {
@@ -77,6 +79,14 @@ body:not(.single) .episode-inner {
 	flex-grow: 3;
 }
 
+.episode-footer {
+	margin-top: 1.5em;
+	padding-top: 1.5em;
+	padding-right: 0;
+	padding-left: 0;
+	font-size: 80%;
+}
+
 .episode-summary {
 	padding: 0;
 }
@@ -89,4 +99,21 @@ body:not(.single) .episode-inner {
 .epsiode-script {
 	font-family: var(--script-font-family);
 	text-align: center;
+}
+
+@media (--narrow-content-query) {
+
+	.episode-inner {
+		display: block;
+	}
+
+	.episode-meta {
+		padding-left: 0;
+	}
+
+	.episode-header,
+	.episode-footer {
+		text-align: center;
+	}
+
 }

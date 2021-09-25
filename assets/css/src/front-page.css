@@ -6,6 +6,9 @@
 	height: 100px;
 	display: flex;
 	align-items: center;
+	position: relative;
+	top: 100px;
+	margin-top: -100px;
 }
 
 .site-branding {
@@ -47,11 +50,6 @@
 .main-navigation {
 	margin: auto;
 	z-index: 999;
-}
-
-.site-main {
-	top: -100px;
-	position: relative;
 }
 
 .entry-content {

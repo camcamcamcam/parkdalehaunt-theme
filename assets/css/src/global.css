@@ -25,9 +25,6 @@
 @import "_typography.css";
 @import "_elements.css";
 @import "_links.css";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -615,13 +612,17 @@ select {
 --------------------------------------------------------------*/
 .site-footer {
 	margin: 1em 0 0;
-	padding: 2em 0;
+	padding: 1em 0 2em;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 }
 
 .site-info {
 	text-align: center;
+}
+
+.site-info img {
+	margin: 0 auto 20px;
 }
 
 /*--------------------------------------------------------------

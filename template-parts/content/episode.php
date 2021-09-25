@@ -11,7 +11,7 @@ namespace WP_Rig\WP_Rig;
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( array( 'entry', 'episode' ) ); ?>>
 	<div class="episode-inner">
-		<header class="epsiode-header">
+		<header class="episode-header">
 			<h2 class="entry-title episode-title"><?php echo esc_html( $post->season_number_episode_number ); ?>: <?php the_title(); ?></h2>
 			<div class="episode-meta">
 				<div class="episode-links">
@@ -39,7 +39,7 @@ namespace WP_Rig\WP_Rig;
 			<div class="episode-summary">
 				<?php echo wp_kses_post( $post->episode_summary ); ?>
 			</div><!-- .episode-summary -->
-			<footer class="entry-footer episode-footer">
+			<footer class="episode-footer">
 				<div class="episode-content-warning">
 					<strong>CONTENT WARNINGS:</strong> <?php echo wp_kses_post( $post->content_warnings ); ?>
 				</div><!-- .episode-content-warning -->

@@ -183,7 +183,23 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 /*--------------------------------------------------------------
 # Button Block - overrides core styles
 --------------------------------------------------------------*/
+.wp-block-buttons {
+	margin-bottom: 1rem;
+}
+
+.wp-block-button.has-icon svg {
+	height: 1rem;
+}
+
+.wp-block-button.has-icon svg,
+.wp-block-button.has-icon img {
+	margin-right: 0.5rem;
+}
+
 .wp-block-button__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: var(--color-theme-primary);
 	font-size: var(--font-size-regular);
 	border-radius: var(--border-radius);
