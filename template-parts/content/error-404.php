@@ -12,40 +12,38 @@ namespace WP_Rig\WP_Rig;
 	<?php get_template_part( 'template-parts/content/page_header' ); ?>
 
 	<div class="page-content">
-		<p>
-			<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-rig' ); ?>
-		</p>
+		<div class="error-message-outer">
+			<div class="error-message-fun">
+				<p>
+					<em><?php esc_html_e( '[SFX: error beep. Static building up]', 'wp-rig' ); ?></em>
+				</p>
+				<p>
+					<?php esc_html_e( 'why are you here', 'wp-rig' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'this is not for you', 'wp-rig' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'remain and burn', 'wp-rig' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'or turn back', 'wp-rig' ); ?>
+				</p>
+			</div>
+			<div class="error-message">
+				<h2>ERROR 404</h2>
+			</div>
+		</div>
+		<div class="error-back">
+			<cite hidden> Naw. You best bring them back where from you got them.</cite>
+			<?php if ( wp_get_referer() ) : ?>
+				<a href="<?php echo esc_url( wp_get_referer() ); ?>" >< Back you go</a>
+			<?php else : ?>
+				<a href="javascript:window.history.back();" >< Back you go</a>
+			<?php endif; ?>
+			<cite hidden> to waits for a woman of less discriminating tastes.</cite>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" >< Return home</a>
+		</div>
 
-		<?php
-		get_search_form();
-
-		wp_rig()->print_styles( 'wp-rig-widgets' );
-		the_widget( 'WP_Widget_Recent_Posts' );
-		?>
-
-		<div class="widget widget_categories">
-			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp-rig' ); ?></h2>
-			<ul>
-			<?php
-			wp_list_categories(
-				array(
-					'orderby'    => 'count',
-					'order'      => 'DESC',
-					'show_count' => 1,
-					'title_li'   => '',
-					'number'     => 10,
-				)
-			);
-			?>
-			</ul>
-		</div><!-- .widget -->
-
-		<?php
-		/* translators: %1$s: smiley */
-		$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp-rig' ), convert_smilies( ':)' ) ) . '</p>';
-		the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-		the_widget( 'WP_Widget_Tag_Cloud' );
-		?>
 	</div><!-- .page-content -->
 </section><!-- .error -->

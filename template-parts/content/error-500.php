@@ -11,7 +11,7 @@ namespace WP_Rig\WP_Rig;
 <section class="error">
 	<header class="page-header">
 		<h1 class="page-title">
-			<?php esc_html_e( 'Oops! Something went wrong.', 'wp-rig' ); ?>
+			<?php esc_html_e( 'Y OU  S H OUL D N’T  B E  HE R E', 'wp-rig' ); ?>
 		</h1>
 	</header><!-- .page-header -->
 

@@ -11,7 +11,7 @@ if ( is_404() ) {
 	?>
 	<header class="page-header">
 		<h1 class="page-title">
-			<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-rig' ); ?>
+			<?php esc_html_e( 'Y OU  S H OUL D N’T  B E  HE R E', 'wp-rig' ); ?>
 		</h1>
 	</header><!-- .page-header -->
 	<?php

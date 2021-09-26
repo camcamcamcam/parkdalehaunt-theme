@@ -644,3 +644,35 @@ were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+# Error pages
+--------------------------------------------------------------*/
+
+.error .page-header {
+	background: var(--color-theme-primary);
+	text-align: center;
+}
+
+.error .page-content {
+	text-align: center;
+}
+
+.error .error-message-fun {
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	font-size: 24px;
+	font-family: var(--global-font-family);
+	border-bottom: var(--color-theme-primary) 2px solid;
+}
+
+.error .error-message h2,
+.error .error-back > * {
+	color: var(--color-theme-primary);
+	font-size: var(--font-size-medium);
+	font-weight: 700;
+}
+
+.error .error-back > *:not([hidden]) {
+	display: block;
+}

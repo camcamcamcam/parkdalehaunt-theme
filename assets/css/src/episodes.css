@@ -98,7 +98,6 @@ body:not(.single) .episode-inner {
 
 .epsiode-script {
 	font-family: var(--script-font-family);
-	text-align: center;
 }
 
 @media (--narrow-content-query) {

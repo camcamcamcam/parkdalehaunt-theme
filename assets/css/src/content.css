@@ -108,6 +108,12 @@
 	width: 100%;
 }
 
+.page-header > *,
+.entry-header > * {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
 @media (--content-query) {
 
 	.entry-content > ul,
